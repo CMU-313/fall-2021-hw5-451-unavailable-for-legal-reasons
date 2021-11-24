@@ -1,0 +1,18 @@
+name: Flake8
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  Flake8 CI:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Flake8
+      run: pip install flake8
+    - name: Run Flake 8
+      run: flake8 ./mayan
