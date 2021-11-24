@@ -21,6 +21,5 @@ jobs:
       - name: Run Flake8
         uses: py-actions/flake8@v1
         with:
-          path: "./mayan"
           exclude: .git, .tx
           max-line-length: "100"
