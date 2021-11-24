@@ -16,3 +16,9 @@ jobs:
       run: make docker-build
     - name: Run tests
       run: make docker-runtest-all
+    - name: GitHub Action for pylint
+      uses: cclauss/GitHub-Action-for-pylint@0.7.0
+    - name: Install Flake8
+      run: pip install flake8
+    - name: Run Flake 8
+      run: flake8 ./mayan
