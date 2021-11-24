@@ -8,7 +8,7 @@ on:
       - master
   workflow_dispatch:
 jobs:
-  Flake8 CI:
+  Flake8-CI:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
