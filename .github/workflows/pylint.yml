@@ -1,0 +1,18 @@
+name: PyLint
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  PyLint CI:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install PyLint
+      run: pip install pylint
+    - name: Run PyLint
+      run: find . -name '*.py' -exec pylint {} \;
